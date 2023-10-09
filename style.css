@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin-top: 5;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "DinosaurAlt";
+  src: url("../font/DinosaurAlt-8MxqJ.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CocogoosePro";
+  src: url("../font/Cocogoose Pro Semilight Italic-trial.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "DinosaurAlt", sans-serif;
+  text-align: center;
+    font-size: 45px;
+    color: #111f13;
+}
+
+.cover-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #111f13;
+    text-align: center;
+  }
+  
+  .ready {
+    color: #111f13;
+    font-size: 50px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    /* display: block; */
+  }
+
+  .result{
+    color: #111f13;
+    font-size: 50px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #start-button {
+    background-color: #305b38;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 35px;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    color: #feffff;
+    font-weight: bold;
+    cursor: pointer;
+    /* display: block; */
+    /* margin: 20px auto; */
+  }
+  
+  /* Change the background color on hover */
+  #start-button:hover {
+    background-color: #305b38d8;
+    
+  }
+
+  .button-container {
+  text-align: center;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.score-container {
+  display: inline-block;
+  margin-left: 400px;
+}
+
+.level-container {
+  display: inline-block;
+  margin-right: 400px;
+  /* margin-left: 20px; */
+}
+
+p {
+  text-align: center;
+}
+
+h2,
+h3, p, a{
+  text-align: center;
+  font-family: "CocogoosePro", sans-serif;
+    font-size: 25px;
+}
+
+body {
+  /* display: flex; */
+
+  background-color: #f5f5f5;
+  background-image: url(images/Landscape.png);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+#board {
+  width: 700px;
+  height: 350px;
+  background: url("images/bg-connected.jpg");
+  background-size: 200% 100%;
+  margin: 20px auto;
+}
+
+#area {
+  width: 700px;
+  height: 350px;
+  position: absolute;
+  overflow: hidden;
+}
+
+#dinoCanvas {
+  width: 110px;
+  height: 110px;
+  background: url("images/run1.png");
+  background-size: 100% 100%;
+position: absolute;
+  margin-top: 200px;
+  margin-left: 50px;
+  animation: lari 0.3s infinite;
+  transition: 1s;
+}
+
+#dinoCanvas.freeze {
+  animation: none;
+  background: url("images/run8.png ");
+  background-size: 100% 100%;
+}
+
+@keyframes lari {
+  0% {
+    background: url("images/run1.png");
+    background-size: 100% 100%;
+  }
+  20% {
+    background: url("images/run2.png");
+    background-size: 100% 100%;
+  }
+  50% {
+    background: url("images/run7.png");
+    background-size: 100% 100%;
+  }
+  75% {
+    background: url("images/run8.png");
+    background-size: 100% 100%;
+  }
+}
+
+#boxCanvas {
+  width: 50px;
+  height: 50px;
+  margin-top: 250px;
+  background: url("images/redbox.png");
+  background-size: 100% 100%;
+  margin-left: 700px;
+}
+
+.hide{
+    display: none;
+}
