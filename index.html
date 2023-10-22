@@ -37,10 +37,30 @@
     <title>Dino Run</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="module" src="script.js"></script>
+    <script type="module" src="api.js"></script>
   </head>
   <body>
-    <div class="game-content" style="display: none;">
-    <!-- <div class="game-content"> -->
+    <div class="homepage">
+      <div id="login">
+        <h1>Login</h1>
+        <form>
+          <input type="text" id="loginEmail" placeholder="Email" />
+          <input type="password" id="loginPassword" placeholder="Password" />
+          <button id="login-button" onclick="login()">Login</button>
+        </form>
+      </div>
+      <div id="register">
+        <h1>Register</h1>
+        <form>
+          <input type="text" id="registerName" placeholder="Full Name" />
+          <input type="text" id="registerEmail" placeholder="Email" />
+          <input type="password" id="registerPassword" placeholder="Password" />
+          <button id="register-button" onclick="register()">Register</button>
+        </form>
+      </div>
+    </div>
+    <div class="game-content" style="display: none">
+      <!-- <div class="game-content"> -->
       <h1>Dino Run</h1>
       <div class="heading">
         <div class="score-container">
@@ -60,10 +80,11 @@
     </div>
     <div class="cover-screen">
       <!-- <h1 class="game-over">Game Over</h1> -->
-      <h1 class="game-over" style="display: none;">Game Over</h1>
-      <h1 class="result"></h1>
-      <h1 class="ready">Dinosaur Run</h1>
-      <button id="start-button">Start Game</button>
+      <h1 class="game-over" style="display: none">Game Over</h1>
+      <button id="try-again-button" style="display: none">Try Again</button>
+      <p class="result"></p>
+      <h1 class="ready" style="display: none">Dinosaur Run</h1>
+      <button id="start-button" style="display: none">Start Game</button>
     </div>
   </body>
 </html>

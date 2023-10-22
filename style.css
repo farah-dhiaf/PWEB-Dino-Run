@@ -25,6 +25,13 @@ h1 {
     color: #111f13;
 }
 
+
+/* .game-over {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
 .cover-screen {
     position: absolute;
     top: 0;
@@ -55,7 +62,7 @@ h1 {
     align-items: center;
   }
 
-  #start-button {
+  #start-button{
     background-color: #305b38;
     padding: 10px 20px;
     border: none;
@@ -71,6 +78,64 @@ h1 {
   
   /* Change the background color on hover */
   #start-button:hover {
+    background-color: #305b38d8;
+    
+  }
+  #try-again-button {
+    background-color: #305b38;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 35px;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    color: #feffff;
+    font-weight: bold;
+    cursor: pointer;
+    /* display: block; */
+    /* margin: 20px auto; */
+  }
+  
+  /* Change the background color on hover */
+  #try-again-button:hover {
+    background-color: #305b38d8;
+    
+  }
+
+  #register-button {
+    background-color: #305b38;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 35px;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    color: #feffff;
+    font-weight: bold;
+    cursor: pointer;
+    /* display: block; */
+    /* margin: 20px auto; */
+  }
+  
+  /* Change the background color on hover */
+  #register-button:hover {
+    background-color: #305b38d8;
+    
+  }
+  #login-button {
+    background-color: #305b38;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 35px;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    color: #feffff;
+    font-weight: bold;
+    cursor: pointer;
+    /* display: block; */
+    /* margin: 20px auto; */
+  }
+  
+  /* Change the background color on hover */
+  #login-button:hover {
     background-color: #305b38d8;
     
   }
@@ -139,7 +204,7 @@ body {
   height: 110px;
   background: url("images/run1.png");
   background-size: 100% 100%;
-position: absolute;
+  position: absolute;
   margin-top: 200px;
   margin-left: 50px;
   animation: lari 0.3s infinite;
@@ -180,6 +245,20 @@ position: absolute;
   margin-left: 700px;
 }
 
-.hide{
-    display: none;
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
+
+input {
+  width: 50%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc; /* Tambahkan border */
+  border-radius: 15px; /* Atur sudut yang agak membulat */
+}
+

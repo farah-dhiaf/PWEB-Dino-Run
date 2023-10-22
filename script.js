@@ -9,6 +9,9 @@ var bg = document.getElementById("board");
 var coverScreen = document.querySelector(".cover-screen");
 var result = document.getElementById("result");
 var startButton = document.getElementById("start-button");
+var tryAgainButton = document.getElementById("try-again-button");
+// var startButton = document.querySelector("start-button");
+// var tryAgainButton = document.querySelector("try-again-button");
 var gameContent = document.querySelector(".game-content");
 var gameOverScreen = document.querySelector(".game-over");
 var readyScreen = document.querySelector(".ready");
@@ -32,12 +35,15 @@ function startGame() {
 
   if (startButton.innerText === "Try Again") {
     // initializeGame();
-    location.reload();
+    // location.reload();
+    restartGame();
   }
 }
 
 function restartGame() {
   // Reset game state (if needed)
+  location.reload();
+  // playGame();
   isMoving = true;
   isGameover = false;
   level = 1;
@@ -152,16 +158,20 @@ function playGame() {
 
   function gameOver() {
     alert("Game Over, Your Score: " + scoreElement.innerHTML);
-    coverScreen.style.display="block";
-    gameContent.style.display="none";
-    gameOverScreen.style.display="block";
-    // result.style.display="block";
-    readyScreen.style.display="none";
-    result.innerText = `Your Score: ${scoreElement.innerHTML}`;
-    startButton.innerText = "Try Again";
     dinoCanvas.setAttribute("class", "freeze");
     isMoving = false;
     isGameover = true;
+    
+    gameContent.style.display="none";
+    coverScreen.style.display="block";
+    gameOverScreen.style.display="block";
+    tryAgainButton.style.display="block";
+    tryAgainButton.addEventListener("click", restartGame);
+    // result.style.display="block";
+    readyScreen.style.display="none";
+    startButton.style.display="none";
+    // result.innerText = `Your Score: ${scoreElement.innerHTML}`;
+    // startButton.innerText = "Try Again";
     
   }
 }
